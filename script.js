@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     // Task 3: Fetch and display comments from JSONPlaceholder
-    fetch('https://jsonplaceholder.typicode.com/posts/24/comments')
+    fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
         .then(response => response.json())
         .then(comments => {
             const commentSection = document.getElementById('comments');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.createElement('div');
         modal.className = 'modal';
         modal.innerHTML = `
-            <form action="https://formspree.io/f/xgvkawwr" method="POST">
+            <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="tel" name="phone" placeholder="Phone" required>

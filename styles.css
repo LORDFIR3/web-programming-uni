@@ -6,98 +6,136 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.5;
-    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a4a);
+    color: #e0e0ff;
+    line-height: 1.6;
+    transition: background 0.5s, color 0.5s;
 }
 
 body.night {
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(135deg, #0a0a1a, #1a1a3a);
+    color: #ffffff;
 }
 
-body.night .flex-item,
-body.night .grid-item {
-    background-color: #444;
-    color: #fff;
-    border-color: #666;
+body.night .flex-card,
+body.night .grid-card {
+    background: rgba(20, 20, 40, 0.9);
+    border-color: #ff4081;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.5);
 }
 
 body.night header,
 body.night footer {
-    background-color: #01579b;
-    color: #fff;
+    background: linear-gradient(90deg, #ff4081, #7c4dff);
 }
 
 body.night #theme-toggle {
-    background-color: #fff;
-    color: #01579b;
+    background-color: #ffffff;
+    color: #ff4081;
 }
 
 /* Header Styles */
 header {
-    background-color: #0288d1;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(90deg, #7c4dff, #ff4081);
+    color: #ffffff;
+    padding: 1.5rem;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 #theme-toggle {
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    color: #0288d1;
+    padding: 0.7rem 1.5rem;
+    background-color: #ffffff;
+    color: #7c4dff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 /* Flexbox Section */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 1000px;
-    margin: 1rem auto;
-    padding: 0 1rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
 }
 
-.flex-item {
-    flex: 1 1 300px;
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #ddd;
+.flex-card {
+    flex: 1 1 350px;
+    background: rgba(30, 30, 50, 0.9);
+    padding: 1.5rem;
+    border: 2px solid #7c4dff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(124, 77, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flex-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(124, 77, 255, 0.6);
+}
+
+.flex-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff4081;
+    margin-bottom: 1rem;
 }
 
 /* Grid Section */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    max-width: 1000px;
-    margin: 1rem auto;
-    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
 }
 
-.grid-item {
-    background-color: white;
-    padding: 1rem;
-    border: 1px solid #ddd;
+.grid-card {
+    background: rgba(30, 30, 50, 0.9);
+    padding: 1.5rem;
+    border: 2px solid #7c4dff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(124, 77, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(124, 77, 255, 0.6);
+}
+
+.grid-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff4081;
+    margin-bottom: 1rem;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #0288d1;
-    color: white;
+    background: linear-gradient(90deg, #7c4dff, #ff4081);
+    color: #ffffff;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Modal Styles */
@@ -107,62 +145,87 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background: rgba(30, 30, 50, 0.95);
     padding: 2rem;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff4081;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(124, 77, 255, 0.5);
     z-index: 1000;
 }
 
 body.night .modal {
-    background-color: #444;
-    color: #fff;
-    border-color: #666;
+    background: rgba(20, 20, 40, 0.95);
+    border-color: #ff4081;
 }
 
 .modal form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .modal input,
 .modal textarea {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
+    padding: 0.7rem;
+    border: 1px solid #7c4dff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
 }
 
 body.night .modal input,
 body.night .modal textarea {
-    background-color: #555;
-    color: #fff;
-    border-color: #666;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #ff4081;
 }
 
 .modal button {
-    padding: 0.5rem;
-    background-color: #0288d1;
-    color: white;
+    padding: 0.7rem;
+    background-color: #ff4081;
+    color: #ffffff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #e91e63;
 }
 
 body.night .modal button {
-    background-color: #01579b;
+    background-color: #e91e63;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-down: 768px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
-    .flex-item,
-    .grid-item {
+    .flex-card,
+    .grid-card {
         flex: 1 1 100%;
     }
 
     .modal {
         width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #theme-toggle {
+        padding: 0.5rem 1rem;
     }
 }
