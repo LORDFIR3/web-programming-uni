@@ -41,9 +41,6 @@ header {
     color: #ffffff;
     padding: 1.5rem;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -51,6 +48,10 @@ header h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
 }
 
 #theme-toggle {
@@ -69,17 +70,20 @@ header h1 {
 }
 
 /* Flexbox Section */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+.container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1.5rem;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
 .flex-card {
-    flex: 1 1 350px;
+    flex: 1 1 300px;
     background: rgba(30, 30, 50, 0.9);
     padding: 1.5rem;
     border: 2px solid #7c4dff;
@@ -99,34 +103,46 @@ header h1 {
     margin-bottom: 1rem;
 }
 
+.flex-card a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+.flex-card a:hover {
+    text-decoration: underline;
+}
+
 /* Grid Section */
 .grid-container {
+    margin-top: 2rem;
+}
+
+.grid-container h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff4081;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
 }
 
 .grid-card {
     background: rgba(30, 30, 50, 0.9);
-    padding: 1.5rem;
+    padding: 1rem;
     border: 2px solid #7c4dff;
     border-radius: 10px;
+    text-align: center;
     box-shadow: 0 0 10px rgba(124, 77, 255, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .grid-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(124, 77, 255, 0.6);
-}
-
-.grid-card h2 {
-    font-family: 'Orbitron', sans-serif;
-    color: #ff4081;
-    margin-bottom: 1rem;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(124, 77, 255, 0.6);
 }
 
 /* Footer Styles */
@@ -200,13 +216,12 @@ body.night .modal button {
 }
 
 /* Responsive Design */
-@media (max-down: 768px) {
+@media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
 
-    .flex-card,
-    .grid-card {
+    .flex-card {
         flex: 1 1 100%;
     }
 
